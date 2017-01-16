@@ -15,7 +15,6 @@ class CrossDomain
      */
     public function handle($request, Closure $next)
     {
-        dd("test");
         return $next($request)
             ->header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With')
             ->header('Access-Control-Allow-Credentials: true')
