@@ -25,7 +25,7 @@
 <script>
     $(document).ready(function () {
         $.ajax({
-            url: "http://ardechetrottinette.com:8000/",
+            url: "http://ardechetrottinette.com:8080/",
             dataType: "json",
             success: function (data) {
                 var selectFrom = $("#from");
@@ -44,7 +44,7 @@
         var inputValeur = $("#valeur");
         $("#convert").bind("click", function () {
             $.ajax({
-                url: "http://ardechetrottinette.com:8000/"+$(selectFrom).val()+"/"+$(selectTo).val(),
+                url: "http://ardechetrottinette.com:8080/"+$(selectFrom).val()+"/"+$(selectTo).val(),
                 data: "value="+$(inputValeur).val(),
                 dataType: "json",
                 success: function (data) {
