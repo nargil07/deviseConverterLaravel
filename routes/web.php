@@ -11,6 +11,12 @@
 |
 */
 
+Route::get('/web', function (){
+    return view('base');
+});
+
 Route::get('/', ['uses'=>'DeviseController@all']);
+
 Route::get('/{identifiant}', ['uses'=>'DeviseController@detail']);
+
 Route::get('/{idFrom}/{idTo}', ['uses'=>'DeviseController@convert']);
